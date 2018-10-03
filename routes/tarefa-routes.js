@@ -24,10 +24,11 @@ router.get('/', async (req, res) =>{
     }
 })
 
-router.put('/:idTarefa', async (req, res) =>{
+router.put('/', async (req, res) =>{
     try{
-        const { descricao, responsavel, data } = req.body
-        const tarefa = await Tarefa.findByIdAndUpdate(req.params.idTarefa, { descricao, responsavel, data}, {new: true})
+        const { _id, descricao, responsavel, data } = req.body
+        console.log(_id)
+        const tarefa = await Tarefa.findByIdAndUpdate(_id, { descricao, responsavel, data}, {new: true})
         return res.send({tarefa})
     }catch(erro){
         console.log(erro)

@@ -10,9 +10,9 @@ const tarefaSchema = new mongoose.Schema({
         required: true
     },
     data:{
-        type: Date,
-        required: true,
-        default: Date.now
+        type: String,
+        required: true
+        //default: Date.now
     }
 })
 
