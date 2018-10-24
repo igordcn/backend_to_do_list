@@ -13,5 +13,6 @@ app.use(function(req, res, next) {
 });
 
 require('./routes/tarefa-routes')(app)
+require('./routes/usuario-route')(app)
 
 app.listen(3000)
